@@ -24,7 +24,7 @@ class Database:
     __instance = None  # Private instance
 
     @staticmethod
-    def getinstance():
+    def get_instance() -> "Database":
         """
             Static access method
             :return: Database
@@ -55,7 +55,13 @@ class Database:
 
 
 if __name__ == "__main__":
-    db1 = Database.getinstance()
-    db2 = Database.getinstance()
+    db1 = Database.get_instance()
+    db2 = Database.get_instance()
 
     print(db1 is db2)  # True
+
+"""
+    Output:
+    -------
+    True
+"""
