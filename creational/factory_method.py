@@ -22,7 +22,7 @@ class Vehicle(ABC):
         Abstract Base Class for Vehicle
     """
     @abstractmethod
-    def drive(self):
+    def drive(self) -> None:
         pass
 
 class Car(Vehicle):
