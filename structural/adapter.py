@@ -15,3 +15,69 @@
 
     - All descriptions and comments created by ChatGPT and GitHub Copilot
 """
+class MediaPlayer:
+    """
+        MediaPlayer Interface
+    """
+    def play(self, audio_type: str, file_name: str):
+        pass
+
+class ExternalMediaPlayer:
+    """
+        ExternalMediaPlayer
+    """
+    def play_audio(self, audio_type: str, file_name: str) -> None:
+        """
+            Play audio file
+        """
+        if audio_type in ("vlc", "wav"):
+            print(f"Playing {file_name} as {audio_type}")
+        else:
+            print(f"Invalid media type {audio_type}")
+
+class MediaAdapter(MediaPlayer):
+    """
+        MediaAdapter
+    """
+    def __init__(self, audio_type: str):
+        self._advanced_music_player = ExternalMediaPlayer()
+        self._audio_type = audio_type
+
+    def play(self, audio_type: str, file_name: str) -> None:
+        if audio_type == self._audio_type:
+            self._advanced_music_player.play_audio(audio_type, file_name)
+        else:
+            print(f"Invalid media type {audio_type}")
+
+class AudioPlayer(MediaPlayer):
+    """
+        AudioPlayer
+    """
+    def __init__(self):
+        self._media_adapter = None
+
+    def play(self, audio_type: str, file_name: str) -> None:
+        if audio_type == "mp3":
+            print(f"Playing {file_name} as {audio_type}")
+        elif audio_type in ("vlc", "wav"):
+            self._media_adapter = MediaAdapter(audio_type)
+            self._media_adapter.play(audio_type, file_name)
+        else:
+            print(f"Invalid media type {audio_type}")
+
+
+if __name__ == "__main__":
+    audio_player = AudioPlayer()
+    audio_player.play("mp3", "file.mp3")
+    audio_player.play("vlc", "file.vlc")
+    audio_player.play("wav", "file.wav")
+    audio_player.play("avi", "file.avi")
+
+"""
+    Output:
+    -------
+    Playing file.mp3 as mp3
+    Playing file.vlc as vlc
+    Playing file.wav as wav
+    Invalid media type avi
+"""
