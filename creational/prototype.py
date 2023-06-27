@@ -7,3 +7,37 @@
 
     - All descriptions and comments created by ChatGPT and GitHub Copilot
 """
+import copy
+
+class Pizza:
+    """
+        Pizza class
+    """
+    def __init__(self, name, ingredients, price):
+        self.name = name
+        self.ingredients = ingredients
+        self.price = price
+
+    def __str__(self) -> str:
+        return f"{self.name} pizza with {self.ingredients} costs {self.price}"
+
+    def clone(self):
+        """
+            Clone method to create a copy of the object
+            :return: Pizza object
+        """
+        return copy.deepcopy(self)
+
+
+if __name__ == "__main__":
+    pizza1 = Pizza("Pepperoni", ["Pepperoni", "Cheese"], 10)
+    pizza2 = pizza1.clone()
+    print(pizza1)
+    print(pizza2)
+
+"""
+    Output:
+    -------
+    Pepperoni pizza with ['Pepperoni', 'Cheese'] costs 10
+    Pepperoni pizza with ['Pepperoni', 'Cheese'] costs 10
+"""
