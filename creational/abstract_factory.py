@@ -100,9 +100,9 @@ class Application:
 
 if __name__ == "__main__":
     app = Application(WindowsFactory())
-    app.create_ui() # Windows Button, Windows Checkbox
+    app.create_ui()  # Windows Button, Windows Checkbox
     app = Application(MacFactory())
-    app.create_ui() # Mac Button, Mac Checkbox
+    app.create_ui()  # Mac Button, Mac Checkbox
 
 """
     Output:
