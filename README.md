@@ -1,6 +1,6 @@
 # Design Patterns with Python 
 
-The main goal is to practice on both.
+The main goal is to practice both.
 
 ## Creational 
 1. [Singleton](https://github.com/bberkay/design-patterns-and-solid/blob/main/creational/singleton.py)
@@ -11,11 +11,12 @@ The main goal is to practice on both.
 
 ## Structural
 1. [Adapter](https://github.com/bberkay/design-patterns-and-solid/blob/main/structural/adapter.py)
-2. Bridge
-3. Composite
-4. Decorator
-5. Facade
-6. Flyweight
-7. Proxy
+2. [Bridge](https://github.com/bberkay/design-patterns-with-python/blob/main/structural/bridge.py)
+3. [Composite](https://github.com/bberkay/design-patterns-with-python/blob/main/structural/composite.py)
+4. [Decorator](https://github.com/bberkay/design-patterns-with-python/blob/main/structural/decorator.py)
+5. [Facade](https://github.com/bberkay/design-patterns-with-python/blob/main/structural/facade.py)
+6. [Flyweight](https://github.com/bberkay/design-patterns-with-python/blob/main/structural/flyweight.py)
+7. [Proxy](https://github.com/bberkay/design-patterns-with-python/blob/main/structural/proxy.py)
 
-others coming soon.
+## Behavioral
+Coming soon...
