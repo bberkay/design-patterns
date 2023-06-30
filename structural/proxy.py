@@ -15,32 +15,32 @@ class Image(ABC):
         The Image interface declares the operations that all concrete proxies must
     """
     @abstractmethod
-    def display(self):
+    def display(self) -> None:
         pass
 
 class HighResolutionImage(Image):
     """
         The HighResolutionImage class is a helper class to load the image from the disk
     """
-    def __init__(self, image_path):
+    def __init__(self, image_path: str):
         self.image_path = image_path
         self.load_image_from_disk()
 
-    def load_image_from_disk(self):
+    def load_image_from_disk(self) -> None:
         print(f'Loading image {self.image_path}')
 
-    def display(self):
+    def display(self) -> None:
         print(f'Displaying image {self.image_path}')
 
 class ImageProxy(Image):
     """
         The ImageProxy class is the proxy for the HighResolutionImage class
     """
-    def __init__(self, image_path):
+    def __init__(self, image_path: str):
         self.image_path = image_path
         self.image = None
 
-    def display(self):
+    def display(self) -> None:
         if self.image is None:
             self.image = HighResolutionImage(self.image_path)
         self.image.display()
