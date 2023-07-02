@@ -11,14 +11,22 @@
     -----------------------
     Chain of Responsibility is a design pattern that allows objects to handle a request sequentially
     until it finds a suitable handler. It promotes loose coupling and flexibility in handling requests.
+
+    - All descriptions and comments created by ChatGPT and GitHub Copilot
 """
 from abc import ABC, abstractmethod
 
 class PurchaseRequest:
+    """
+        The PurchaseRequest class represents a request to purchase an item.
+    """
     def __init__(self, amount: int):
         self.amount = amount
 
 class Approver(ABC):
+    """
+        The Approver interface declares a method for building the chain of handlers.
+    """
     def __init__(self):
         self.successor = None
 
@@ -26,10 +34,13 @@ class Approver(ABC):
     def process_request(self, request: PurchaseRequest):
         pass
 
-    def set_successor(self, successor):
+    def set_successor(self, successor: "Approver"):
         self.successor = successor
 
 class Manager(Approver):
+    """
+        The Manager class represents a handler in the chain of responsibility.
+    """
     name = "Manager"
 
     def process_request(self, request: PurchaseRequest):
@@ -39,6 +50,9 @@ class Manager(Approver):
             self.successor.process_request(request)
 
 class Director(Approver):
+    """
+        The Director class represents a handler in the chain of responsibility.
+    """
     name = "Director"
 
     def process_request(self, request: PurchaseRequest):
@@ -48,6 +62,9 @@ class Director(Approver):
             self.successor.process_request(request)
 
 class CEO(Approver):
+    """
+        The CEO class represents a handler in the chain of responsibility.
+    """
     name = "CEO"
 
     def process_request(self, request: PurchaseRequest):
