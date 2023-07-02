@@ -19,13 +19,13 @@ The main goal is to practice both.
 7. [Proxy](https://github.com/bberkay/design-patterns-with-python/blob/main/structural/proxy.py)
 
 ## Behavioral
-1. Chain Of Responsibility
-2. Command
-3. Iterator
-4. Mediator
-5. Memento
-6. Observer
-7. State
-8. Strategy
-9. Template Method
-10. Visitor
+1. [Chain Of Responsibility](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/chain_of_responsibility.py)
+2. [Command](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/command.py)
+3. [Iterator](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/iterator.py)
+4. [Mediator](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/mediator.py)
+5. [Memento](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/memento.py)
+6. [Observer](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/observer.py)
+7. [State](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/state.py)
+8. [Strategy](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/strategy.py)
+9. [Template Method](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/template_method.py)
+10. [Visitor](https://github.com/bberkay/design-patterns-with-python/blob/main/behavioral/visitor.py)
