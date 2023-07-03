@@ -13,10 +13,13 @@
 
     - All descriptions and comments created by ChatGPT and GitHub Copilot
 """
-class OrderState:
+from abc import ABC, abstractmethod
+
+class OrderState(ABC):
     """
         OrderState
     """
+    @abstractmethod
     def process_order(self) -> None:
         pass
 
