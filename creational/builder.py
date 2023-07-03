@@ -19,7 +19,7 @@ class Car:
         self.color = None
         self.model = None
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.brand} {self.color} {self.model}"
 
 class CarBuilder:
@@ -31,24 +31,27 @@ class CarBuilder:
     def __init__(self):
         self.car = Car()
 
-    def set_brand(self, brand: str):
+    def set_brand(self, brand: str) -> "CarBuilder":
         self.car.brand = brand
         return self
 
-    def set_color(self, color: str):
+    def set_color(self, color: str) -> "CarBuilder":
         self.car.color = color
         return self
 
-    def set_model(self, model: str):
+    def set_model(self, model: str) -> "CarBuilder":
         self.car.model = model
         return self
 
-    def build(self):
+    def build(self) -> Car:
         return self.car
 
 
 if __name__ == "__main__":
+    # Client Code
     builder = CarBuilder()
+
+    # Build a car
     car = builder.set_brand("Ford").set_color("Red").set_model("Mustang").build()
     print(car)
 

@@ -91,7 +91,7 @@ class Application:
     def __init__(self, factory: GUIFactory):
         self.factory = factory
 
-    def create_ui(self):
+    def create_ui(self) -> None:
         button = self.factory.create_button()
         checkbox = self.factory.create_checkbox()
         button.render()
@@ -100,9 +100,9 @@ class Application:
 
 if __name__ == "__main__":
     app = Application(WindowsFactory())
-    app.create_ui()  # Windows Button, Windows Checkbox
+    app.create_ui()
     app = Application(MacFactory())
-    app.create_ui()  # Mac Button, Mac Checkbox
+    app.create_ui()
 
 """
     Output:

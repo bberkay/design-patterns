@@ -44,6 +44,9 @@ class VehicleFactory:
         Factory Class for Vehicle
     """
     def create_vehicle(self, vehicle_type: VehicleType) -> Car | Truck:
+        """
+            Create a vehicle
+        """
         if vehicle_type == VehicleType.CAR:
             return Car()
         elif vehicle_type == VehicleType.TRUCK:
@@ -53,11 +56,15 @@ class VehicleFactory:
 
 
 if __name__ == "__main__":
+    # Clint Code
     vehicle_factory = VehicleFactory()
+
+    # Create a car and a truck
     car = vehicle_factory.create_vehicle(VehicleType.CAR)
-    car.drive()  # Driving Car
+    car.drive()
+
     truck = vehicle_factory.create_vehicle(VehicleType.TRUCK)
-    truck.drive()  # Driving Truck
+    truck.drive()
 
 """
     Output:

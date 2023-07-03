@@ -27,7 +27,6 @@ class Database:
     def get_instance() -> "Database":
         """
             Static access method
-            :return: Database
         """
         if Database.__instance is None:
             Database()
@@ -36,22 +35,13 @@ class Database:
     def __init__(self) -> None:
         """
             Virtually private constructor
-
-            :raise Exception: This class is a singleton!
         """
         if Database.__instance is not None:
             raise Exception("This class is a singleton!")
         else:
             Database.__instance = self
 
-    def connect(self) -> None:
-        """
-            Connect to database
-        :return: None
-        """
-        pass
-
-    # Other methods ...
+    # other methods
 
 
 if __name__ == "__main__":

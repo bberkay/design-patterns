@@ -13,7 +13,7 @@ class Pizza:
     """
         Pizza class
     """
-    def __init__(self, name, ingredients, price):
+    def __init__(self, name: str, ingredients: list[str], price: int):
         self.name = name
         self.ingredients = ingredients
         self.price = price
@@ -21,12 +21,14 @@ class Pizza:
     def __str__(self) -> str:
         return f"{self.name} pizza with {self.ingredients} costs {self.price}"
 
-    def clone(self):
+    def clone(self) -> "Pizza":
         """
             Clone method to create a copy of the object
             :return: Pizza object
         """
         return copy.deepcopy(self)
+
+    # other methods
 
 
 if __name__ == "__main__":
