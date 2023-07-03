@@ -23,9 +23,15 @@ class Television:
         Television is the receiver of the requests.
     """
     def turn_on(self) -> None:
+        """
+            Turn on the television.
+        """
         print("Television: turn on")
 
     def turn_off(self) -> None:
+        """
+            Turn off the television.
+        """
         print("Television: turn off")
 
 class TurnOnCommand(Command):
@@ -36,6 +42,9 @@ class TurnOnCommand(Command):
         self._receiver = receiver
 
     def execute(self) -> None:
+        """
+            Execute the command by calling the receiver's action.
+        """
         self._receiver.turn_on()
 
 class TurnOffCommand(Command):
@@ -46,6 +55,9 @@ class TurnOffCommand(Command):
         self._receiver = receiver
 
     def execute(self) -> None:
+        """
+            Execute the command by calling the receiver's action.
+        """
         self._receiver.turn_off()
 
 class RemoteControl:
@@ -59,15 +71,21 @@ class RemoteControl:
         self.command = command
 
     def press_button(self):
+        """
+            Press the button to execute the command.
+        """
         if self.command is not None:
             self.command.execute()
 
 if __name__ == "__main__":
+    # Client code
     television = Television()
     turn_on_command = TurnOnCommand(television)
     turn_off_command = TurnOffCommand(television)
 
+    # Invoker
     remote_control = RemoteControl()
+
     remote_control.set_command(turn_on_command)
     remote_control.press_button()
 
