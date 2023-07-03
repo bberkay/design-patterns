@@ -10,6 +10,9 @@
     - All descriptions and comments created by ChatGPT and GitHub Copilot
 """
 class NewsAgency:
+    """
+        The Subject class
+    """
     def __init__(self):
         self.subscribers = []
 
@@ -33,6 +36,9 @@ class NewsAgency:
             subscriber.update(news)
 
 class Subscriber:
+    """
+        The Observer class
+    """
     def __init__(self, name: str):
         self.name = name
 
