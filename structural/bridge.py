@@ -54,9 +54,11 @@ class Circle(Shape):
         self.renderer.render_circle(self.radius)
 
 if __name__ == "__main__":
+    # Create a vector renderer and a raster renderer
     vector_renderer = VectorRenderer()
     raster_renderer = RasterRenderer()
 
+    # Create a circle with a vector renderer and a raster renderer
     circle1 = Circle(vector_renderer, 5)
     circle1.draw()
 

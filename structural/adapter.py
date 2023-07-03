@@ -44,6 +44,9 @@ class MediaAdapter(MediaPlayer):
         self._audio_type = audio_type
 
     def play(self, audio_type: str, file_name: str) -> None:
+        """
+            Play audio file
+        """
         if audio_type == self._audio_type:
             self._advanced_music_player.play_audio(audio_type, file_name)
         else:
@@ -57,6 +60,9 @@ class AudioPlayer(MediaPlayer):
         self._media_adapter = None
 
     def play(self, audio_type: str, file_name: str) -> None:
+        """
+            Play audio file
+        """
         if audio_type == "mp3":
             print(f"Playing {file_name} as {audio_type}")
         elif audio_type in ("vlc", "wav"):
@@ -67,7 +73,10 @@ class AudioPlayer(MediaPlayer):
 
 
 if __name__ == "__main__":
+    # Create audio player
     audio_player = AudioPlayer()
+
+    # Play audio files
     audio_player.play("mp3", "file.mp3")
     audio_player.play("vlc", "file.vlc")
     audio_player.play("wav", "file.wav")
