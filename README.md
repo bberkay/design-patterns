@@ -1,6 +1,6 @@
 # Design Patterns with Python 
 
-The main goal is to practice both.
+The main purpose is to practice.
 
 ## Creational 
 1. [Singleton](https://github.com/bberkay/design-patterns-and-solid/blob/main/creational/singleton.py)
